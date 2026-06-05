@@ -1,29 +1,39 @@
 # Just Jason Jamboree Junction
 
-Revision 1.4.0
+Revision 1.4.3
 
-This is a single-page static website. The visible webpage is intentionally dominated by repeated instances of `Jason`.
+This is a single-page static website. The visible webpage is intentionally dominated by repeated instances of `Jason`. It deploys to https://justjason.fyi/.
 
-## Revision 1.4.0 changes
+## Revision history
 
-- Changed the page to a black/gray design.
+### 1.4.3 - 2026-06-04
+
+- Moved the fade rate into two editable constants in `assets/js/script.js`:
+  - `fadePercentPerStep` (default `5`) - percentage points darker per step.
+  - `paragraphsPerStep` (default `1`) - paragraphs that share a color before stepping.
+- Default behavior: 5% darker every paragraph, fully black after ~20 paragraphs.
+
+### 1.4.0 - 2026-06-02
+
+- Switched to a black/gray design.
 - Replaced chip-style Jason blocks with randomized paragraph-style Jason text.
 - Randomized the number of Jason words per sentence and sentence counts per paragraph.
-- Added a grayscale fade where body text starts at `#ffffff` and darkens by one grayscale step every 100 generated Jason words.
+- Added a grayscale fade where body text darkens over time.
 - Kept infinite scroll.
 - Kept the fixed bottom count.
 
 ## Fade behavior
 
-The body text uses only grayscale values:
+The body text uses only grayscale values from `#ffffff` down to `#000000`. The fade speed is controlled by two constants at the top of `assets/js/script.js`:
 
-- `#ffffff`
-- `#fefefe`
-- `#fdfdfd`
-- ...
-- `#000000`
+| Constant | Default | Effect |
+|---|---|---|
+| `fadePercentPerStep` | `5` | Drops brightness by this percentage of pure white per step. |
+| `paragraphsPerStep`  | `1` | Number of paragraphs that share a color before stepping. |
 
-At 100 Jason words per grayscale step, the body text reaches full black after roughly 25,600 generated Jason words.
+Examples:
+- `fadePercentPerStep=5, paragraphsPerStep=1` - 5% darker every paragraph, fully black after 20 paragraphs (default).
+- `fadePercentPerStep=1, paragraphsPerStep=3` - 1% darker every 3 paragraphs, fully black after 300 paragraphs.
 
 ## Files
 
@@ -31,9 +41,12 @@ At 100 Jason words per grayscale step, the body text reaches full black after ro
 - `assets/css/style.css` - visual layout and colors
 - `assets/js/script.js` - randomized Jason paragraph generator, infinite scroll behavior, grayscale fading, and counter
 - `.gitignore` - local cleanup rules
+- `.github/workflows/deploy-notify.yml` - post-push health check and email notification
 
-## Upload
+## Deployment
 
-Upload the contents of this folder to your hosting path, for example:
+This repo is connected to Hostinger Git Auto-Deploy for justjason.fyi. Any push to `main` triggers a webhook that clones the repo into the site's `public_html`. A GitHub Actions workflow then verifies the live site responds and emails the result.
 
-`/public_html/infinite-jason/`
+To upload manually instead:
+
+`/public_html/`
