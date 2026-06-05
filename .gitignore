@@ -9,3 +9,6 @@ Thumbs.db
 # Logs/temp
 *.log
 *.tmp
+
+# Local notes (not tracked)
+TODO.md
