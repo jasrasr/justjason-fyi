@@ -1,9 +1,13 @@
 /*
   Project: Just Jason Jamboree Junction
   File: assets/js/script.js
-  Revision: 1.4.3
-  Updated: 2026-06-04
-  Change: Fade is now controlled by two editable constants — fadePercentPerStep and paragraphsPerStep. Default: 5% darker per paragraph.
+  Revision: 1.5.0
+  Updated: 2026-06-08
+  Description: Generates randomized Jason paragraphs, infinite scroll batches, grayscale fading, and the visible Jason counter.
+  Revision History:
+  1.5.0 - Added standardized file metadata and revision history.
+  1.4.3 - Added editable fadePercentPerStep and paragraphsPerStep constants.
+  1.4.0 - Replaced card/chip output with randomized paragraph-style Jason text.
 */
 (function () {
   'use strict';

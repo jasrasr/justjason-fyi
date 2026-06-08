@@ -1,52 +1,60 @@
 # Just Jason Jamboree Junction
 
-Revision 1.4.3
+## File Metadata
 
-This is a single-page static website. The visible webpage is intentionally dominated by repeated instances of `Jason`. It deploys to https://justjason.fyi/.
+- File: README.md
+- Revision: 1.5.0
+- Updated: 2026-06-08
+- Description: Public-facing explanation for a deeply unnecessary joke website.
 
-## Revision history
+## Revision History
+
+### 1.5.0 - 2026-06-08
+
+- Rewrote the README to admit, under limited pressure, that this is a joke project.
+- Moved the practical deploy and implementation notes to `technical-specs.md`.
+- Added `changelog.md` and `changelog.php` so the site's march through history can be inspected by future committees.
+- Removed tracked `test.txt`, which had completed its brief but meaningful career as a Hostinger sync witness.
 
 ### 1.4.3 - 2026-06-04
 
-- Moved the fade rate into two editable constants in `assets/js/script.js`:
-  - `fadePercentPerStep` (default `5`) - percentage points darker per step.
-  - `paragraphsPerStep` (default `1`) - paragraphs that share a color before stepping.
-- Default behavior: 5% darker every paragraph, fully black after ~20 paragraphs.
+- Taught the site how to avoid stale JavaScript cache, because even nonsense deserves operational discipline.
+- Added editable fade controls so the page can become darker with measurable intent.
 
 ### 1.4.0 - 2026-06-02
 
-- Switched to a black/gray design.
-- Replaced chip-style Jason blocks with randomized paragraph-style Jason text.
-- Randomized the number of Jason words per sentence and sentence counts per paragraph.
-- Added a grayscale fade where body text darkens over time.
-- Kept infinite scroll.
-- Kept the fixed bottom count.
+- Promoted the project from "several Jasons" to "an escalating Jason situation."
+- Added randomized paragraph generation, infinite scroll, and a counter for anyone conducting serious Jason analytics.
 
-## Fade behavior
+## What Is This?
 
-The body text uses only grayscale values from `#ffffff` down to `#000000`. The fade speed is controlled by two constants at the top of `assets/js/script.js`:
+This is `justjason.fyi`, a single-purpose website dedicated to the relentless, unnecessary, and mathematically expandable presentation of the word Jason.
 
-| Constant | Default | Effect |
-|---|---|---|
-| `fadePercentPerStep` | `5` | Drops brightness by this percentage of pure white per step. |
-| `paragraphsPerStep`  | `1` | Number of paragraphs that share a color before stepping. |
+It is not a productivity tool. It is not a portfolio. It is not a startup. It does not solve a market inefficiency unless the market was suffering from a severe shortage of Jason.
 
-Examples:
-- `fadePercentPerStep=5, paragraphsPerStep=1` - 5% darker every paragraph, fully black after 20 paragraphs (default).
-- `fadePercentPerStep=1, paragraphsPerStep=3` - 1% darker every 3 paragraphs, fully black after 300 paragraphs.
+## Why?
 
-## Files
+Because the internet still has room for small, specific nonsense.
 
-- `index.html` - the single website page
-- `assets/css/style.css` - visual layout and colors
-- `assets/js/script.js` - randomized Jason paragraph generator, infinite scroll behavior, grayscale fading, and counter
-- `.gitignore` - local cleanup rules
-- `.github/workflows/deploy-notify.yml` - post-push health check and email notification
+Some websites ask you to subscribe. Some ask you to accept cookies. This one asks nothing except that you briefly consider the cultural weight of the word Jason repeated until the page gives up and generates more Jason.
 
-## Deployment
+## Features
 
-This repo is connected to Hostinger Git Auto-Deploy for justjason.fyi. Any push to `main` triggers a webhook that clones the repo into the site's `public_html`. A GitHub Actions workflow then verifies the live site responds and emails the result.
+- A title with more ceremony than the premise deserves.
+- Paragraphs made almost entirely of Jason.
+- Infinite scroll, because finite Jason would be an insult to the mission.
+- A live Jason counter for compliance, research, and mild concern.
+- Text that gradually fades toward black, mirroring the solemn gravity of the project.
+- A changelog, because even jokes need version control when they are hosted in public.
 
-To upload manually instead:
+## Changelog
 
-`/public_html/`
+The official historical record lives at:
+
+- `changelog.md`
+- `https://justjason.fyi/changelog.php`
+
+## Technical Notes
+
+For the practical details, deployment notes, file map, and other evidence that this was built with more care than the premise strictly required, see `technical-specs.md`.
+

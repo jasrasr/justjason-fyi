@@ -1,9 +1,13 @@
 /*
   Project: Just Jason Jamboree Junction
   File: assets/css/style.css
-  Revision: 1.4.3
-  Updated: 2026-06-04
-  Change: No CSS changes — bumped to keep revision in sync with editable fade constants added in script.js.
+  Revision: 1.5.0
+  Updated: 2026-06-08
+  Description: Visual layout, typography, colors, and fixed footer styling.
+  Revision History:
+  1.5.0 - Added standardized file metadata and changelog link styling.
+  1.4.3 - Bumped to keep revision in sync with editable fade constants added in script.js.
+  1.4.0 - Switched to the black/gray paragraph design.
 */
 :root {
   --bg: #000000;
@@ -237,6 +241,13 @@ body {
   min-width: 5ch;
   font-variant-numeric: tabular-nums;
   text-align: right;
+}
+
+.jason-counter a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.18em;
 }
 
 @media (max-width: 760px) {

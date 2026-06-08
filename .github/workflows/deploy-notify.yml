@@ -1,3 +1,12 @@
+# Project: Just Jason Jamboree Junction
+# File: .github/workflows/deploy-notify.yml
+# Revision: 1.5.0
+# Updated: 2026-06-08
+# Description: Checks the deployed live site after pushes to main and sends an email notification.
+# Revision History:
+# 1.5.0 - Added file metadata and revision history.
+# 1.0.0 - Added post-push live-site health check and email notification.
+
 name: Deploy Notification
 
 on:
