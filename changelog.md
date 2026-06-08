@@ -3,11 +3,18 @@
 ## File Metadata
 
 - File: changelog.md
-- Revision: 1.5.0
+- Revision: 1.6.0
 - Updated: 2026-06-08
 - Description: Public changelog source for the Just Jason Jamboree Junction site.
 
 ## Revision History
+
+### 1.6.0 - 2026-06-08
+
+- Added generated `h1`, `h2`, and `h3` Jason headings throughout the text stream.
+- Added occasional paragraph drop caps.
+- Updated the bottom counter pill to align better on iPhone and stay on one line.
+- Kept newly generated visible body text constrained to `Jason` and `jason`.
 
 ### 1.5.0 - 2026-06-08
 

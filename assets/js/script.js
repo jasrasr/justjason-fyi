@@ -1,10 +1,11 @@
 /*
   Project: Just Jason Jamboree Junction
   File: assets/js/script.js
-  Revision: 1.5.0
+  Revision: 1.6.0
   Updated: 2026-06-08
   Description: Generates randomized Jason paragraphs, infinite scroll batches, grayscale fading, and the visible Jason counter.
   Revision History:
+  1.6.0 - Added generated Jason h1/h2/h3 headings and occasional paragraph drop caps.
   1.5.0 - Added standardized file metadata and revision history.
   1.4.3 - Added editable fadePercentPerStep and paragraphsPerStep constants.
   1.4.0 - Replaced card/chip output with randomized paragraph-style Jason text.
@@ -122,13 +123,41 @@
     paragraph.appendChild(sentence);
   }
 
+  function addJasonHeading(fragment) {
+    const headingLevel = getRandomInteger(1, 3);
+    const heading = document.createElement(`h${headingLevel}`);
+    const wordCount = getRandomInteger(1, 4);
+
+    heading.className = `jason-heading jason-heading-level-${headingLevel}`;
+    heading.style.color = getGrayForParagraph(generatedParagraphCount);
+
+    for (let index = 0; index < wordCount; index += 1) {
+      if (index > 0) {
+        heading.appendChild(document.createTextNode(' '));
+      }
+
+      heading.appendChild(document.createTextNode(chance(0.18) ? 'jason' : 'Jason'));
+      generatedJasonCount += 1;
+    }
+
+    fragment.appendChild(heading);
+  }
+
   function addJasonParagraph(fragment) {
     const paragraph = document.createElement('p');
     paragraph.className = 'jason-paragraph';
     paragraph.style.color = getGrayForParagraph(generatedParagraphCount);
 
+    if (generatedParagraphCount > 0 && generatedParagraphCount % 5 === 0) {
+      addJasonHeading(fragment);
+    }
+
+    if (generatedParagraphCount % 4 === 1) {
+      paragraph.classList.add('has-drop-cap');
+    }
+
     // Some paragraphs open with a superscript "Jason" — like a citation mark.
-    if (chance(0.32)) {
+    if (!paragraph.classList.contains('has-drop-cap') && chance(0.32)) {
       const superscript = document.createElement('sup');
       superscript.className = 'jason-superscript';
       superscript.textContent = 'Jason';

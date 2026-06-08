@@ -3,11 +3,17 @@
 ## File Metadata
 
 - File: README.md
-- Revision: 1.5.0
+- Revision: 1.6.0
 - Updated: 2026-06-08
 - Description: Public-facing explanation for a deeply unnecessary joke website.
 
 ## Revision History
+
+### 1.6.0 - 2026-06-08
+
+- Added headings, because Jason discourse requires hierarchy.
+- Added drop caps, because medieval manuscripts walked so Jason could scroll.
+- Adjusted the bottom counter so mobile Jason accounting can stand upright.
 
 ### 1.5.0 - 2026-06-08
 
@@ -57,4 +63,3 @@ The official historical record lives at:
 ## Technical Notes
 
 For the practical details, deployment notes, file map, and other evidence that this was built with more care than the premise strictly required, see `technical-specs.md`.
-

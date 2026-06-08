@@ -3,13 +3,20 @@
 ## File Metadata
 
 - File: technical-specs.md
-- Revision: 1.5.0
+- Revision: 1.6.0
 - Updated: 2026-06-08
 - Description: Technical project overview, file map, revision history, and deployment notes.
 
 This is a single-page static website. The visible webpage is intentionally dominated by repeated instances of `Jason`. It deploys to https://justjason.fyi/.
 
 ## Revision History
+
+### 1.6.0 - 2026-06-08
+
+- Added generated `h1`, `h2`, and `h3` headings using only `Jason` or `jason`.
+- Added occasional paragraph drop caps through `.has-drop-cap`.
+- Updated the bottom counter pill to use grid alignment, nowrap text, and a wider mobile width.
+- Updated cache-busting asset versions to `1.6.0`.
 
 ### 1.5.0 - 2026-06-08
 
