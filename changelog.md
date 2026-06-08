@@ -3,11 +3,22 @@
 ## File Metadata
 
 - File: changelog.md
-- Revision: 1.6.0
+- Revision: 1.6.2
 - Updated: 2026-06-08
 - Description: Public changelog source for the Just Jason Jamboree Junction site.
 
 ## Revision History
+
+### 1.6.2 - 2026-06-08
+
+- Updated drop-cap `J` styling so it inherits the same fading grayscale color as its paragraph.
+- Updated stylesheet cache keys to `1.6.2`.
+
+### 1.6.1 - 2026-06-08
+
+- Updated the browser page title to `Just Jason`.
+- Updated the meta description to a short paragraph of `Jason` text.
+- Added Open Graph and Twitter/X metadata for social link previews.
 
 ### 1.6.0 - 2026-06-08
 

@@ -1,10 +1,11 @@
 /*
   Project: Just Jason Jamboree Junction
   File: assets/css/style.css
-  Revision: 1.6.0
+  Revision: 1.6.2
   Updated: 2026-06-08
   Description: Visual layout, typography, colors, and fixed footer styling.
   Revision History:
+  1.6.2 - Updated drop caps to inherit paragraph fade color.
   1.6.0 - Added generated heading styles, drop caps, and wider aligned footer counter styling.
   1.5.0 - Added standardized file metadata and changelog link styling.
   1.4.3 - Bumped to keep revision in sync with editable fade constants added in script.js.
@@ -191,13 +192,13 @@ body {
 .jason-paragraph.has-drop-cap::first-letter {
   float: left;
   margin: 0.08em 0.12em 0 0;
-  color: #ffffff;
+  color: inherit;
   font-size: 4.2em;
   font-weight: 950;
   line-height: 0.78;
   text-shadow:
-    0.025em 0.025em 0 #9a9a9a,
-    0.05em 0.05em 0 #3a3a3a;
+    0.025em 0.025em 0 currentColor,
+    0.05em 0.05em 0 currentColor;
 }
 
 .jason-paragraph:first-of-type {

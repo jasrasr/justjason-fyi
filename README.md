@@ -3,11 +3,21 @@
 ## File Metadata
 
 - File: README.md
-- Revision: 1.6.0
+- Revision: 1.6.2
 - Updated: 2026-06-08
 - Description: Public-facing explanation for a deeply unnecessary joke website.
 
 ## Revision History
+
+### 1.6.2 - 2026-06-08
+
+- Made the dramatic opening Jason fade with the rest of its paragraph, because even the big J must obey the lighting department.
+
+### 1.6.1 - 2026-06-08
+
+- Updated the title to Just Jason, which was somehow both obvious and previously missed.
+- Updated the description to a paragraph that bravely continues saying Jason.
+- Added social preview metadata so shared links may also say Jason with confidence.
 
 ### 1.6.0 - 2026-06-08
 

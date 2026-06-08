@@ -3,13 +3,24 @@
 ## File Metadata
 
 - File: technical-specs.md
-- Revision: 1.6.0
+- Revision: 1.6.2
 - Updated: 2026-06-08
 - Description: Technical project overview, file map, revision history, and deployment notes.
 
 This is a single-page static website. The visible webpage is intentionally dominated by repeated instances of `Jason`. It deploys to https://justjason.fyi/.
 
 ## Revision History
+
+### 1.6.2 - 2026-06-08
+
+- Changed `.has-drop-cap::first-letter` from fixed white to inherited paragraph color.
+- Updated stylesheet cache keys to `1.6.2`.
+
+### 1.6.1 - 2026-06-08
+
+- Updated the page `<title>` to `Just Jason`.
+- Updated the meta description to a short paragraph of `Jason` text.
+- Added Open Graph and Twitter/X metadata for social link previews.
 
 ### 1.6.0 - 2026-06-08
 

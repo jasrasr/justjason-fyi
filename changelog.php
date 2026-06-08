@@ -2,10 +2,11 @@
 /*
   Project: Just Jason Jamboree Junction
   File: changelog.php
-  Revision: 1.6.0
+  Revision: 1.6.2
   Updated: 2026-06-08
   Description: Renders changelog.md as a simple browser-readable changelog page.
   Revision History:
+  1.6.2 - Updated stylesheet cache key for drop-cap fade fix.
   1.6.0 - Updated stylesheet cache key for footer and generated-text styling changes.
   1.5.0 - Added Markdown changelog viewer.
 */
@@ -86,7 +87,7 @@ $content = render_changelog_markdown($markdown);
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Just Jason Jamboree Junction changelog">
   <title><?php echo htmlspecialchars($title, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); ?></title>
-  <link rel="stylesheet" href="assets/css/style.css?v=1.6.0">
+  <link rel="stylesheet" href="assets/css/style.css?v=1.6.2">
   <style>
     .changelog-page {
       width: min(820px, calc(100% - 2rem));
