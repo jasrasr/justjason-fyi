@@ -1,9 +1,10 @@
 # Project: Just Jason Jamboree Junction
 # File: .gitignore
-# Revision: 1.5.0
-# Updated: 2026-06-08
+# Revision: 1.5.1
+# Updated: 2026-10-17
 # Description: Keeps local editor, runtime, and note files out of the public site repo.
 # Revision History:
+# 1.5.1 - Ignored local AI assistant memory and instruction files.
 # 1.5.0 - Added file metadata and revision history.
 # 1.4.3 - Ignored local TODO notes while keeping deployable site files tracked.
 
@@ -21,3 +22,8 @@ Thumbs.db
 
 # Local notes (not tracked)
 TODO.md
+
+# Local AI assistant memory and instructions (kept out of this public repo)
+/.ai/
+/CLAUDE.md
+/AGENTS.md
